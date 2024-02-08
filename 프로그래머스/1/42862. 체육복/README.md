@@ -2,6 +2,16 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42862) 
 
+<br>
+
+## 📝 정리하기
+- <strong>Greedy 알고리즘 유형</strong>
+- sort를 통한 정렬 필요
+- lost와 reserve의 중복된 값 filter (여유분 도둑맞아 자신만 입을 수 있음)
+- <strong>[⭐]</strong>  answer 초기값을 `n-lost.length`가 아닌, 필터링 이후의 `n-newLost.length`로 두어야 함.<br> 여유분 도둑맞은 사람도 체육복 입을 수 있기 때문!
+
+<br>
+
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.10 ms
