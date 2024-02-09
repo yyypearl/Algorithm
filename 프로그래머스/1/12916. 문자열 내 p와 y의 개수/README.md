@@ -1,7 +1,14 @@
 # [level 1] 문자열 내 p와 y의 개수 - 12916 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12916) 
+<br>
 
+## 📝 정리하기
+- `toUpperCase()` or `toLowerCase()` 사용
+- `split('P')`으로 갯수 비교하기 <br> (실제 개수를 구하는 것이 아니라, 개수의 일치를 확인하는 것이므로 보다 간단한 풀이가 가능!)
+- <strong>[⭐] spread 연산자 </strong> -> abc 문자를 ['a', 'b', 'c'] 배열의 원소로 할당할 수 있다! `[...str]`
+
+<br>
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.05 ms
