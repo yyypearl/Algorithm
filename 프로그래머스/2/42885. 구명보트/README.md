@@ -2,6 +2,16 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42885) 
 
+<br>
+
+## 📝 정리하기
+- **[⏱]** 중첩 for문을 사용했더니 계속해서 시간초과가 일어났다.
+- 이중 for문으로 start와 end를 만들어서 조건 충족시 end값을 변경하려했지만, <br>for문 내에 조건절로 들어있는 end 값은 변경되지 않았음
+- **[⭐] while문을 사용해서 `while(start<end)`** 라는 조건을 충족할 때만 실행하게 해, <br> end 뒷편의 불필요한 코드 동작을 줄인다.
+- **[🚨]** while문에서 `(start<=end)`로 조건을 설정하면 start와 end가 같을 때에도! <br> 내부 명령을 실행하므로 주의하자.
+
+<br>
+
 ### 성능 요약
 
 메모리: 38.1 MB, 시간: 10.66 ms
