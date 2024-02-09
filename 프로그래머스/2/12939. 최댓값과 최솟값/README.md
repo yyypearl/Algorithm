@@ -2,6 +2,13 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939) 
 
+<br>
+
+## 📝 정리하기
+- <strong>[⭐]</strong> <br> JS에서 `Math.max()`, `Math.min()`은 문자열에서도 사용할 수 있음 <br> (*굳이 숫자로 바꿔줄 필요가 없다!)
+
+<br>
+
 ### 성능 요약
 
 메모리: 33.5 MB, 시간: 0.07 ms
