@@ -2,6 +2,51 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12933?language=javascript#) 
 
+### 📝 정리하기
+.join('') : 배열의 요소를 빈 문자열('')로 연결하여 문자열로 변환 <br/>
+[⭐] join () 활용법, while문 실행 조건 (true여야 실행) <br/>
+
+### 👀 기억하고 싶은 풀이
+```
+function solution(n) {
+  const newN = n + "";
+  const newArr = newN
+    .split("")
+    .sort()
+    .reverse()
+    .join("");
+
+  return +newArr; //
+}
+```
+[풀이] js에서 자동형변환을 사용하면 number+string => string, string*number => number이다. 예를 들면, 1+"" => "1", "1"*1 => 1 입니다. split은 string에 사용하는 메서드니 기호에 맞게 형변환을 한 것이라고 할 수 있다.
+
+```
+function solution(n) {
+    // 문자풀이
+    // return parseInt((n+"").split("").sort().reverse().join(""));
+
+    // 숫자풀이
+    var r = 0, e = 0, arr = [];
+
+    do {
+        e = n%10;
+
+        // 정렬
+        if (arr.length == 0) arr.push(e);
+        else for (var i=0, len=arr.length; i<len; i++) {
+            if (arr[i] <= e) { arr.splice(i,0,e); break; }
+            if (i == len-1) arr.push(e);
+        }
+    } while (n = Math.floor(n/10), n>0);
+
+    return parseInt(arr.join(""));
+}
+```
+[풀이] 숫자 풀이로 하면 실행속도가 더 빠르다!
+
+<br/>
+
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.08 ms
