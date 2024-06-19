@@ -2,6 +2,19 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/76501) 
 
+<br/>
+
+### 👀 기억할만한 풀이
+```
+function solution(absolutes, signs) {
+
+    return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
+}
+```
+- **reduce 잘 이용하기!**
+
+<br/>
+
 ### 성능 요약
 
 메모리: 33.5 MB, 시간: 0.28 ms
