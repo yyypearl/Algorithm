@@ -2,6 +2,22 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/134240) 
 
+<br>
+
+## 📝 정리하기
+**- [⭐] 문자열을 배열로 변환하는 3가지 방법 (convert string to array)**
+1) ```String.prototype.split()``` : 스트링 프로토타입 메서드 split
+2) ```[...string]``` : 스프레드 연산자 (ES6부터 추가)
+3) ```Array.from(string)``` : Array 객체의 정적 메서드
+   
+**- [🔎] 이 중에서 어떤 게 좋을까?**
+- 나의 경우, split()이 익숙해 split()을 많이 사용해왔다.
+- _하지만 실제 속도를 해본 결과_, ```스프레드 연산자 > split > Array.from``` 로 <br/>
+  ```스프레드 연산자```가 ```Array.from```에 비해 **두 배 정도 빠르다고** 한다!
+=> 결론적으로, Spread Operation이 속도도 빠르고, 가독성도 좋고, 이모티콘도 처리할 수 있기에 <br/>
+   **스프레드 연산자**를 사용하자!
+<br>
+
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.05 ms
