@@ -2,6 +2,24 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/81301) 
 
+<br>
+
+## 📝 정리하기
+- **[⭐] replace와 replaceAll의 차이점!**
+- replace()는 문자 그대로 인식, replaceAll()은 정규식 표현을 인식 <br/>
+-> replace()는 찾고자 하는 문자 1개만 찾아서 바꾼다. 만약, 모든 문자를 바꾸고 싶다면 정규식을 사용해 replace 해주는 방법이 있다!
+```
+var answer = str.replace(/blue/g, "red");
+```
+**- [🔎] replace 하기 위해 사용되는 정규식**
+-  * /searchvalue/ :  '/ /' 사이에 검색할 문자를 입력<br/>
+ * searchvalue1 | searchvalue2 | ... :  여러개의 문자를 바꾸도 싶은 경우' | ' 로 구분하여 여러 문자 입력<br/>
+ * g :  발생할 모든 패턴에 대한 전역 검색 (Global search)<br/>
+ * i :  대/소문자 구분을 무시 (Case-insensitive search)<br/>
+ * m :  여러줄 검색 (Multi-line search)<br/>
+<br>
+
+
 ### 성능 요약
 
 메모리: 33.5 MB, 시간: 0.13 ms
