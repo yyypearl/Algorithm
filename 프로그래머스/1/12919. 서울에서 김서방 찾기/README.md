@@ -1,6 +1,13 @@
 # [level 1] 서울에서 김서방 찾기 - 12919 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12919) 
+<br/><br/>
+
+## 👀 기억할만한 풀이
+```var idx = seoul.indexOf('Kim');```
+- 이렇게 for문이 아닌 indexOf를 사용할 수도 있다!
+
+<br/>
 
 ### 성능 요약
 
