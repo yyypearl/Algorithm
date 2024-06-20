@@ -2,6 +2,32 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/131127) 
 
+<br>
+
+## 📝 정리하기
+**- [❗] 중요**
+<br>
+```var numberArr = number;``` 이러한 코드는<br>
+```numberArr``` 변수를 ```number``` 배열과 동일한 값으로 초기화하는 것처럼 보이지만,<br>
+실제로는 ```number``` 배열에 대한 참조(reference)를 ```numberArr```에 할당하는 것이다!<br>
+<br>
+**따라서, numberArr의 값이 변경되면 실제로 number 배열의 값도 변경된다.**
+
+_→ 문제 원인이었음._
+
+이를 피하기 위해서는 **number 배열의 복사**본을 만들어야 한다.<br>
+이렇게 하면 numberArr를 변경해도 number 배열은 영향을 받기 때문이다.<br>
+
+<br>
+
+**- [⭐] 배열 복사본을 만드는 방법**
+1) slice() 메서드를 사용
+2) 전개 연산자(...)를 사용
+3) Array.from() 메서드를 사용
+
+<br>
+
+
 ### 성능 요약
 
 메모리: 33.4 MB, 시간: 0.07 ms
