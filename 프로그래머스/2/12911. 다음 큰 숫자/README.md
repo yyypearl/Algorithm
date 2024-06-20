@@ -2,6 +2,44 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12911) 
 
+<br>
+
+## 📝 정리하기
+**- [⭐] 이진수 변환 방법**
+-> toString을 사용한다! (다른 8진수, 16진수 등도 가능)
+```
+let num = 100;
+num.toString(2); // '1100100'
+```
+<br>
+
+**- [⭐] 배열에서 특정 값의 개수 구하기**
+1) for문 사용
+   ```
+   let count = 0;
+   for(let i=0; i < arr.length; i++) {
+           if(arr[i] === 'a')  {
+                   count++;
+          }
+   }
+   ```
+2) filter 사용 -> 내가 쓴 방법
+   ```
+   let count = arr.filter(element => 'a' === element).length;
+   ```
+3) reduce 사용
+   ```
+   let count = arr.reduce((cnt, element) => cnt + ('a' === element), 0);
+   ```
+
+<br>
+
+**- [🎁] 접근법**
+- 이진수에서 1의 개수를 세고, 하나씩 늘려가며 1의 개수 같은 거 나올 때 return!
+- 꼭 하나의 함수 내에서 풀려고 하지 않아도 된다. 이렇게 solution 함수 외의 별도의 함수를 만들어 푸는 것도 방법!
+
+<br>
+
 ### 성능 요약
 
 메모리: 33 MB, 시간: 0.09 ms
