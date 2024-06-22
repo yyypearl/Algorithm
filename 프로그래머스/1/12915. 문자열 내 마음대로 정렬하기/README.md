@@ -2,6 +2,48 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12915) 
 
+<br/>
+
+# 📝 정리하기
+**- [⭐] 문자열 비교**<br/>
+- 숫자를 비교 시에는 뺄셈 연산을 사용해여 비교할 수 있다. (```a-b```: 오름차순(양수), ```b-a```: 내림차순(음수))
+  ```
+  [원리]
+  비교 함수 : 양수 값, 음수 값, 0
+  
+  ex) a-b
+  양수: a가 b보다 큽니다. 이 경우, a는 b보다 뒤에 와야 합니다.
+  음수: a가 b보다 작습니다. 이 경우, a는 b보다 앞에 와야 합니다.
+  0: a와 b가 같습니다. 이 경우, a와 b의 순서는 그대로 유지됩니다.
+  ```
+  
+- 하지만, 문자열을 비교할 때는 뺄셈이 아닌, ```localeCompare```와 같은 비교 함수를 사용해야 한다.
+<br/>
+
+
+**- [🚨] 삼항연산자 중괄호 사용**<br/>
+**1) 중괄호 사용 시** <br/>
+: 중괄호 내의 삼항 연산자 결과를 명시적으로 반환하지 않는다.<br/>
+  따라서, 명시적으로 ```return``` 키워드로 반환해야 한다.
+```
+function solution(strings, n) {
+    return strings.sort((a, b) => {
+        a[n] === b[n] ? a.localeCompare(b) : a[n].localeCompare(b[n]);
+    });
+}
+```
+
+**2) 중괄호 없을 시**  <br/>
+: 중괄호를 사용하지 않으므로 삼항 연산자의 결과가 자동으로 반환된다<br/>
+  화살표 함쉐서 중괄호를 생략하면 해당 표현식이 암시적으로 반환된다.
+```
+function solution(strings, n) {
+    return strings.sort((a, b) => a[n] === b[n] ? a.localeCompare(b) : a[n].localeCompare(b[n]));
+}
+```
+<br/>
+
+
 ### 성능 요약
 
 메모리: 36 MB, 시간: 8.87 ms
