@@ -2,6 +2,42 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/68644) 
 
+<br/>
+
+# 📝 정리하기
+**- [🔔] 배열 중복 원소 제거 : Set 사용**<br/>
+- Set이란?
+  - value값 만을 저장하며 중복을 허용하지 않는 Collection으로, 동일한 값은 1개만 가질 수 있다.
+  - value값으로 같은 객체가 들어올 경우에는 중복값으로 인지하지 않는다.
+  - 대소문자를 구분하기 때문에, hi와 HI는 다른 값으로 인지한다.
+
+```
+  const answer = [...new Set(temp)]; // filter로 중복원소를 제거하기보다는 이렇게 Set을 사용해 간단히 중복값을 제거한다.
+```
+<br/>
+
+**- [❗] 더 간단하게! : push 메서드 사용**<br/>
+```
+var result = [];
+    var k=0;
+    for(let i=0; i<numbers.length; i++){
+        for (j=i+1; j<numbers.length; j++){
+            result[k] = numbers[i]+numbers[j];
+            k++; // 기존 코드에서처럼 늘어나는 인덱스 변수를 지정해 하나씩 늘릴 필요 없이,
+        }
+    }
+```
+```
+var result = [];
+    var k=0;
+    for(let i=0; i<numbers.length; i++){
+        for (j=i+1; j<numbers.length; j++){
+            result.push(numbers[i]+numbers[j]); // 이렇게 push를 사용해 쉽게 해결한다.
+        }
+    }
+```
+<br/>
+
 ### 성능 요약
 
 메모리: 33.6 MB, 시간: 0.64 ms
