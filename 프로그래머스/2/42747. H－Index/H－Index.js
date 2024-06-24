@@ -7,3 +7,4 @@ function solution(citations) {
     }
     return answer;
 }
+
